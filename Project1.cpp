@@ -10,7 +10,6 @@
 
 using namespace std;
 
-// Function prototypes
 void print_prompt();
 void parse_input(char *input, char **command);
 void execute_command(char **command, vector<int>& history);
@@ -19,7 +18,7 @@ void history_command(const vector<int>& history);
 
 int main() {
     char input[MAX_INPUT_SIZE];
-    char *command[2];  // We only need to handle simple commands without arguments
+    char *command[2];  
     vector<int> history;
 
     while (1) {
@@ -27,7 +26,7 @@ int main() {
         
         if (fgets(input, sizeof(input), stdin) == NULL) {
             printf("\n");
-            break;  // Exit on EOF
+            break;
         }
 
         // Remove newline character
@@ -55,13 +54,13 @@ int main() {
 }
 
 void print_prompt() {
-    printf("st582s$ ");  // Replace YourBearID with your actual BearID
+    printf("st582s$ ");  
 }
 
 // Note: This function should be replaced with the provided parsing code
 void parse_input(char *input, char **command) {
     command[0] = strtok(input, " \n");
-    command[1] = NULL;  // We're only handling simple commands without arguments
+    command[1] = NULL;
 }
 
 void execute_command(char **command, std::vector<int>& history) {
