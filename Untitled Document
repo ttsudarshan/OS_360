@@ -1,0 +1,19 @@
+﻿
+
+While changing number of samples and keeping threads constant the time taken to calculate pie. Pie was similar. There was only mili second variation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ The graph shows stable performance with low time taken up to around 20 threads. After 60 threads, there's a sharp spike in time taken, reaching a peak, and then it stabilizes at a higher level as the thread count increases.
