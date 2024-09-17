@@ -36,6 +36,7 @@ int main() {
         } else {
             executeCommand(input);
         }
+        }
     }
 
     return 0;
