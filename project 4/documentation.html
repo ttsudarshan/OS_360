@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+<h2>Documentation Standards</h2>
+
+
+All programming projects must be documented.  Documentation counts for at most 10%
+of the programming project grade.  At the top of each file, please
+include a comment block containing the following information.  Note, it
+does not have to look like this &quot;box&quot; style documentation.  However, it
+should be very readable.
+<ol>
+	<li>Your Name
+	</li><li>Course Name
+	</li><li>Project Number and Title
+	</li><li>Due Date
+	</li><li>Instructor&#39;s Name
+</li></ol>
+
+
+<h4>EXAMPLE:</h4><p>
+
+
+<pre>//********************************************************************
+//
+// Ima CPP. Programmer
+// Operating Systems
+// Programming Project #0: Project Title
+// January 1, 1970
+// Instructor: Dr. Siming Liu
+//
+//********************************************************************
+
+</pre>Each procedure or function should have a documentation &quot;header&quot; that includes
+the following information
+
+<ol>
+	<li> Function or Procedure Name
+	</li><li> A Brief Description of the Function or Procedure
+	</li><li> Value Parameter Data Dictionary
+	</li><li> Reference Parameter Data Dictionary
+	</li><li> Local Variable Data Dictionary
+</li></ol>
+
+
+<h4>EXAMPLE:</h4><p>
+
+
+<pre>//********************************************************************
+//
+// Linear Search Function
+//
+// This function performs a linear search on an list of student
+// records.  If the search key is found in the list, the return
+// value is true and false otherwise.
+//
+// Return Value
+// ------------
+// bool                         True/False if Key is found
+//
+// Value Parameters
+// ----------------
+// Key		string		The search key
+// SList	StudentList	The list of student structures
+//
+// Reference Parameters
+// --------------------
+// location     int             The location where Key is found
+//
+//*******************************************************************
+bool linear_search( SList StudentList, string Key, int &amp;location )
+{
+  // local variables
+  bool retval;
+  int ii;
+
+
+  // initialize local variables
+  retval = false;
+  ii = 0;
+
+
+  location = -1;
+
+
+  // search for the key in the list
+  for( ii=0; ((ii&lt;SList.Size()) &amp;&amp; (!retval)); ii++ )
+     if( SList.Name == Key )
+       {
+         location = ii;
+	 retval = true;
+       }
+
+
+  // return to calling function
+  return( retval );
+}
+</pre>
+
+</p></p>
+<script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+						if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+								elm.setAttribute('style', 'display: block; height: 0.5rem;');
+							});
+
+							window.D2L.MathJax.loadMathJax({
+								outputScale: 1.5,
+								renderLatex: true,
+								enableMML3Support: false
+							});
+						}
+					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script></body></html>
